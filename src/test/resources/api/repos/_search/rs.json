@@ -1,0 +1,13 @@
+{
+  "total_count": "${total_count}",
+  "incomplete_results": "${incomplete_results}",
+  "items": [
+    {
+      "id": "${repo_id}",
+      "name": "${repo_name}",
+      "owner": {
+        "login": "${owner_login}"
+      }
+    }
+  ]
+}

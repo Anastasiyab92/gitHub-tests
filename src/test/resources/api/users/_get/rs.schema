@@ -1,0 +1,38 @@
+{
+  "type": "array",
+  "items": {
+    "title": "Simple User",
+    "description": "A GitHub user.",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "login": {
+        "type": "string",
+        "examples": [
+          "octocat"
+        ]
+      },
+      "id": {
+        "type": "integer",
+        "format": "int64",
+        "examples": [
+          1
+        ]
+      },
+      "type": {
+        "type": "string",
+        "examples": [
+          "User"
+        ]
+      },
+      "site_admin": {
+        "type": "boolean"
+      }
+    }
+  }
+}
