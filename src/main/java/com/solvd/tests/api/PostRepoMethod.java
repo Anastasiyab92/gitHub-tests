@@ -1,6 +1,5 @@
 package com.solvd.tests.api;
 
-import com.sun.xml.bind.v2.TODO;
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.annotation.Endpoint;
 import com.zebrunner.carina.api.annotation.RequestTemplatePath;
@@ -18,7 +17,7 @@ public class PostRepoMethod extends AbstractApiMethodV2 {
 
     public PostRepoMethod(String repoName, String description, boolean isPrivate) {
         replaceUrlPlaceholder("base_url", Configuration.getRequired("api_url"));
-       //TODO: add your token for test in config.properties
+        //TODO: add your token for test in config.properties
         setHeader("Authorization", "Bearer " + Configuration.getRequired("api_token"));
 
         addProperty("name", repoName);
