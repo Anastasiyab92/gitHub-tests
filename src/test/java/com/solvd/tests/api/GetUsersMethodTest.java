@@ -1,9 +1,11 @@
 package com.solvd.tests.api;
 
 import com.solvd.tests.db.models.User;
+import com.zebrunner.carina.api.apitools.validation.JsonCompareKeywords;
 import com.zebrunner.carina.core.IAbstractTest;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.response.Response;
+import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -33,17 +35,12 @@ public class GetUsersMethodTest implements IAbstractTest {
     }
 
     @Test
-    public void testUserByUsername() {
+    public void testUserByName() {
         String userName = "Anastasiyab92";
-        GetUserMethod getUserMethod = new GetUserMethod(userName);
-        Response response = getUserMethod.callAPIExpectSuccess();
+        GetUserByNameMethod getUserByNameMethod = new GetUserByNameMethod(userName);
+        getUserByNameMethod.setProperties("api/users/_get/user.properties");
+        getUserByNameMethod.callAPI();
+        getUserByNameMethod.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
 
-        User user = response.as(User.class);
-
-        SoftAssert sa = new SoftAssert();
-        sa.assertNotNull(user, "User not found!");
-        sa.assertEquals(user.getLogin(), userName, "Username doesn't equals!");
-
-        sa.assertAll();
     }
 }

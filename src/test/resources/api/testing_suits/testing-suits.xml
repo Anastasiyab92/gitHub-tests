@@ -3,6 +3,7 @@
     <test name="GitHub API Test">
         <classes>
             <class name="com.solvd.tests.api.GetUsersMethodTest"/>
+            <class name="com.solvd.tests.api.GetUserByNameMethod"/>
             <class name="com.solvd.tests.api.PostRepoMethodTest"/>
             <class name="com.solvd.tests.api.DeleteRepoMethodTest"/>
         </classes>
