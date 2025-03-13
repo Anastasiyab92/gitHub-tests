@@ -2,7 +2,9 @@
 <suite name="GitHub API Suite">
     <test name="GitHub API Test">
         <classes>
-            <class name="com.solvd.tests.api.GetUserMethodTest"/>
+            <class name="com.solvd.tests.api.GetUsersMethodTest"/>
+            <class name="com.solvd.tests.api.PostRepoMethodTest"/>
+            <class name="com.solvd.tests.api.DeleteRepoMethodTest"/>
         </classes>
     </test>
 </suite>

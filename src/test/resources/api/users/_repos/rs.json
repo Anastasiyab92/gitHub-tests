@@ -1,8 +1,12 @@
-[
-  {
-    "id": "${repo_id}",
-    "name": "${repo_name}",
-    "description": "${repo_description}",
-    "private": "${repo_private}"
+{
+  "id": "${id}",
+  "name": "${name}",
+  "full_name": "${full_name}",
+  "private": "${private}",
+  "owner": {
+    "login": "${owner_login}",
+    "id": "${owner_id}"
   }
-]
+}
+
+

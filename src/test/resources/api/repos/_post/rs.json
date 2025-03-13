@@ -1,11 +1,9 @@
 {
   "id": "${id}",
-  "name": "${repo_name}",
-  "description": "${repo_description}",
-  "private": ${
-  repo_private
-},
-"owner": {
-"login": "${owner_login}"
-}
+  "name": "${name}",
+  "description": "${description}",
+  "private": "${private?string}",
+  "owner": {
+    "login": "${owner_login}"
+  }
 }

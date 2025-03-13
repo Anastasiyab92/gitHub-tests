@@ -1,0 +1,6 @@
+{
+  "owner": {
+    "login": "${login}"
+  },
+  "repo": "${name}"
+}
