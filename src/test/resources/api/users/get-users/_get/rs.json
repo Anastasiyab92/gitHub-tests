@@ -1,0 +1,9 @@
+[
+  {
+    "login": "${login!''}",
+    "id": "${id!''}",
+    "type": "${type!''}",
+    "user_view_type": "${user_view_type!''}",
+    "site_admin": "${site_admin!''}"
+  }
+]
