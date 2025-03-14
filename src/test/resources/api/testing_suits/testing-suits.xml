@@ -1,11 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="GitHub API Suite">
+<suite name="GitHub API Suite" parallel="methods" thread-count="5">
     <test name="GitHub API Test">
         <classes>
             <class name="com.solvd.tests.api.GetUsersMethodTest"/>
             <class name="com.solvd.tests.api.GetUserByNameMethod"/>
-            <class name="com.solvd.tests.api.PostRepoMethodTest"/>
-            <class name="com.solvd.tests.api.DeleteRepoMethodTest"/>
+            <class name="com.solvd.tests.api.RepoMethodsTest"/>
         </classes>
     </test>
 </suite>
